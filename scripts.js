@@ -44,4 +44,14 @@ firstBold.style.color = "#7C9EA6";
 // Changing and Adding to Existing Content
 // For the first list item below, replace the text with some that says "this is new list item text." For the third list item below, add your name to the existing text, but wrap it in some strong tags.
 
-const contentList = document.querySelector(".content_list");
+const contentListFirst = document.querySelector(
+  ".content_list > li:first-of-type"
+);
+contentListFirst.textContent = "This is new list item text.";
+
+document.querySelectorAll(".content_list li")[2].innerHTML +=
+  "<strong> Caleb Lopez </strong>";
+
+// The removeAttribute() method allows you to completely remove an attribute from an element by passing in the attribute name. In the book, you'll usually see this used to remove the "hidden" attribute from an element.
+
+document.querySelector("#remove a").removeAttribute("hidden");
